@@ -52,7 +52,7 @@ export class AppComponent {
             { name: 'test35' },
             { name: 'test36' },
             { name: 'test37' },
-            { name: 'test38' },
+            { name: 'test38' }
             // { name: 'test39' },
             // { name: 'test40' }
           ],
