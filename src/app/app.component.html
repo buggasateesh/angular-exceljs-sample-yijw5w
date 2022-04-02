@@ -1,0 +1,29 @@
+<p>
+  Exporting an excel file of type .xslx !!!
+</p>
+<p>Export as XLSX by clicking the below button</p>
+<pre>
+  <!-- {{ data2 | json }} -->
+</pre>
+<button (click)="exportAsXLSX()"><i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button>
+<table>
+  <tr>
+    <td>Sheet</td>
+    <td>Test</td>
+    <td>Eid</td>
+    <td>Ename</td>
+    <td>Esal</td>
+  </tr>
+  <ng-container *ngFor="let sheet of workbookData">
+    <ng-container *ngFor="let row of sheet.rows; let i = index">
+      <tr>
+        <td [attr.rowspan]="sheet.rows.length" *ngIf="i === 0">{{ sheet.workSheet}}</td>
+        <td>{{row.eid}}</td>
+        <td>{{row.test}}</td>
+        <td>{{row.ename}}</td>
+        <td>{{row.esal}}</td>
+      </tr>
+    </ng-container>
+  </ng-container>
+
+</table>
